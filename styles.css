@@ -1,0 +1,47 @@
+body{margin:0;background:#FFFFFF}
+html{scroll-behavior:smooth}
+a{color:#121212}a:hover{color:#4A4E55}
+.lede::first-letter{float:left;font-family:'EB Garamond',serif;font-size:4.6em;line-height:0.82;padding:0.06em 0.1em 0 0;color:#121212}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes ring{0%{transform:scale(0.55);opacity:0}25%{opacity:0.9}100%{transform:scale(1.35);opacity:0}}
+@keyframes march{to{stroke-dashoffset:-200}}
+@keyframes beacon{0%,100%{transform:scale(1);opacity:0.45}50%{transform:scale(1.6);opacity:0}}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.22s}.d3{animation-delay:.38s}.d4{animation-delay:.54s}
+.fade{animation:fade 1.8s ease-out .2s both}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 7s ease-out infinite}
+.ring2{animation-delay:2.3s}.ring3{animation-delay:4.6s}
+.path{animation:march 9s linear infinite}
+.beacon{transform-box:fill-box;transform-origin:center;animation:beacon 2.4s ease-in-out infinite}
+.btn{transition:transform .25s ease,background-color .25s ease,border-color .25s ease,color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark:hover{background-color:#2A2C30;color:#FFFFFF}
+.btn-line:hover{border-color:#0B0B0C;color:#0B0B0C}
+.goal{transition:background-color .3s ease}
+.menu-btn{transition:background-color .2s ease}
+.menu-btn:hover{background-color:#F2F3F5}
+.menu-link{transition:color .2s ease,padding-left .25s ease}
+.menu-link:hover{color:#1F5FD6;padding-left:6px}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.drop{animation:drop .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cue-line{animation:cue 2.2s ease-in-out infinite}
+.goal:hover{background-color:#1A1A1A}
+.role{transition:padding-left .25s ease}
+.sig{transition:color .2s ease}
+.sig:hover{color:#1F5FD6}
+.sig-arrow{transition:transform .25s ease}
+.sig:hover .sig-arrow{transform:translate(3px,-3px)}
+.role:hover{padding-left:8px}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 5% entry 45%}
+}
+@media (prefers-reduced-motion: reduce){
+*{animation:none !important;transition:none !important}
+html{scroll-behavior:auto}
+}
+[hidden]{display:none !important}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+
